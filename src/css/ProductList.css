@@ -1,0 +1,107 @@
+.main-nav{
+    margin-top: 0;
+    background-color: rgb(182, 102, 102);
+    padding: 5px;
+    box-shadow: 5px 5.57447px 5.57447px rgba(65, 59, 59, 0.1);
+}
+.nav{
+    display: flex;
+}
+.nav > li{
+    list-style-type: none;
+}
+.nav-items{
+    text-decoration: none;
+    color: black;
+    margin-right: 150px;
+}
+.product-header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.product-list{
+    display: grid;
+    grid-template: auto auto auto auto / auto auto auto auto;
+    flex-wrap: wrap;
+}
+.product{
+    border: 1px solid gray;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 5px 5.57447px 5.57447px rgba(65, 59, 59, 0.1);
+    margin-bottom: 20px;
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 16%;
+}
+.add-button{
+    background-color: rgb(185, 177, 177);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    padding: 0;
+}
+.add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 70px;
+    text-align: center;
+    background-color: rgb(185, 177, 177);
+    color: white;
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+    height: 40px;
+    /* text-align: center; */
+    /* padding: 10px; */
+}
+.del-button{
+    width: 100px;
+    background-color: rgb(228, 77, 77);
+    border: none;
+    border-radius: 10px;
+    height: 40px;
+}
+.delete-button{
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(228, 77, 77);
+    outline: none;
+    border: none;
+    color: white;
+    height: 100%;
+    padding: 0;
+}
+.add-btn:hover, .del-button:hover{
+    box-shadow: inset 5px 5.57447px 5.57447px rgba(65, 59, 59, 0.1);
+}
+input.delete-button{
+    background-color: rgb(228, 77, 77);
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.cancel-btn{
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}

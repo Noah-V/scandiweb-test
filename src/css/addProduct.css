@@ -1,0 +1,65 @@
+body{
+    font-size: x-large;
+}
+section{
+    height: fit-content
+}
+#product_form{
+    display: flex;
+    flex-direction: column;
+}
+.section-form{
+    display: flex;
+    flex-direction: column;
+}
+.section-form > *{
+    margin-bottom: 20px;
+}
+
+.section-form > div input{
+    padding: 10px;
+    width: 300px
+}
+.responsive-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+.responsive-form > *{
+    margin-bottom: 10px;
+}
+.furniture > *{
+    margin-bottom: 10px;
+}
+.error{
+    color: #FF0000;
+}
+/* #productType-result{
+    display: none;
+} */
+.good{
+    color: rgb(48, 170, 48);
+}
+.links{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.add-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 70px;
+    text-align: center;
+    background-color: rgb(185, 177, 177);
+    color: white;
+    outline: none;
+    border: none;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+    height: 40px;
+    /* text-align: center; */
+    /* padding: 10px; */
+}
