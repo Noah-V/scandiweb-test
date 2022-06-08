@@ -4,13 +4,13 @@ import axios from 'axios';
 import '../css/ProductList.css';
 export default function ProductList(){
 
-    const navigate = useNavigate();
+
 
     const [products, setProducts] = React.useState([]);
 
 
     const loadProducts = async () => {
-        const result = await axios.get("http://localhost/PHP%20connect%20with%20React/viewProducts.php")
+        const result = await axios.get("https://localhost/PHP%20connect%20with%20React/viewProducts.php")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
         // console.log(result.data.phpresult[0])
@@ -26,7 +26,7 @@ export default function ProductList(){
         console.log("fjdnlfjd")
             products.forEach(product => {
                 if(product.select){
-                    axios.delete(`http://localhost/PHP%20connect%20with%20React/deleteProducts.php?id=${product.ID}`)
+                    axios.delete(`https://localhost/PHP%20connect%20with%20React/deleteProducts.php?id=${product.ID}`)
                     .then(res => {
                         // console.log(res.data);
                         loadProducts();

@@ -16,7 +16,7 @@ export default function AddProduct(){
         var productType = document.getElementById('productType').value;
         // console.log(productType)
         var relevantFields = document.querySelectorAll('[ifproducttype]');
-        var productTypeResult = document.getElementById('productType-result');
+        // var productTypeResult = document.getElementById('productType-result');
         // console.log(productTypeResult)
         // console.log(relevantFields.)
     
@@ -59,7 +59,7 @@ export default function AddProduct(){
         if(Object.keys(formErrors).length === 0 ** isSubmit){
             console.log(productDetails);
         }
-    }, [formErrors])
+    },[formErrors])
 
 
 
@@ -67,7 +67,7 @@ export default function AddProduct(){
         event.preventDefault();
         setFormErrors(validate(productDetails));
         setIsSubmit(true)
-        await axios.post("http://localhost/PHP%20connect%20with%20React/addProducts.php", productDetails)
+        await axios.post("https://localhost/PHP%20connect%20with%20React/addProducts.php", productDetails)
         .then(res => console.log(res.data));
         navigate('/');
     }
