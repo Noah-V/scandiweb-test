@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import axios from 'axios';
 import '../css/ProductList.css';
 export default function ProductList(){
@@ -10,7 +10,7 @@ export default function ProductList(){
 
 
     const loadProducts = async () => {
-        const result = await axios.get("/api")
+        const result = await axios.get("http://juniortestnoahvikoo.infinityfreeapp.com/viewProducts.php")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
         // console.log(result.data.phpresult[0])
@@ -26,7 +26,7 @@ export default function ProductList(){
         console.log("fjdnlfjd")
             products.forEach(product => {
                 if(product.select){
-                    axios.delete(`/api/deleteProduct.php?id=${product.ID}`)
+                    axios.delete(`http://juniortestnoahvikoo.infinityfreeapp.com/deleteProduct.php?id=${product.ID}`)
                     .then(res => {
                         // console.log(res.data);
                         loadProducts();
