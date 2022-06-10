@@ -115,7 +115,7 @@ export default function AddProduct(){
                     <div className="product-header">
                         <h2>Product Add</h2>
                         <div className="links">
-                            <button className="add-btn">Submit</button>
+                            <button className="add-btn">Save</button>
                             <Link to="/"><button className="cancel-btn" style={{backgroundColor:`#E44D4D`}}>Cancel</button></Link>
                         </div>
                     </div>
