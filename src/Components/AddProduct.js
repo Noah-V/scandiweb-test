@@ -68,8 +68,11 @@ export default function AddProduct(){
         setFormErrors(validate(productDetails));
         setIsSubmit(true)
         await axios.post("https://scandiwebnoah.000webhostapp.com/addProducts.php", productDetails)
-        .then(res => console.log(res.data));
-        navigate('/');
+        .then(res => {
+                console.log(res.data);
+                navigate('/')
+            }
+        );
     }
     
     function validate(productDetails){

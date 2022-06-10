@@ -28,7 +28,7 @@ export default function ProductList(){
                 if(product.select){
                     axios.delete(`https://scandiwebnoah.000webhostapp.com/deleteProducts.php?id=${product.ID}`)
                     .then(res => {
-                        // console.log(res.data);
+                        console.log(res.data);
                         loadProducts();
                     })      
                 }
