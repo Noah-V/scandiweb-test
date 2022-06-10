@@ -9,7 +9,7 @@ export default function ProductList(){
     const [products, setProducts] = React.useState([]);
 
 
-    const loadProducts =  () => {
+    const loadProducts =  async () => {
         const result = axios.get("/api/viewProducts.php")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
