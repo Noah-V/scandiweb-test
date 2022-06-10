@@ -10,7 +10,7 @@ export default function ProductList(){
 
 
     const loadProducts = async () => {
-        const result = await axios.get("https://juniortestnoahvikoo.infinityfreeapp.com/viewProducts.php")
+        const result = await axios.get("http://juniortestnoahvikoo.infinityfreeapp.com/viewProducts.php")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
         // console.log(result.data.phpresult[0])
@@ -26,7 +26,7 @@ export default function ProductList(){
         console.log("fjdnlfjd")
             products.forEach(product => {
                 if(product.select){
-                    axios.delete(`https://juniortestnoahvikoo.infinityfreeapp.com/deleteProduct.php?id=${product.ID}`)
+                    axios.delete(`http://juniortestnoahvikoo.infinityfreeapp.com/deleteProduct.php?id=${product.ID}`)
                     .then(res => {
                         // console.log(res.data);
                         loadProducts();
