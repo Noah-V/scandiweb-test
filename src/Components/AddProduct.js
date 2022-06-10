@@ -67,7 +67,7 @@ export default function AddProduct(){
         event.preventDefault();
         setFormErrors(validate(productDetails));
         setIsSubmit(true)
-        await axios.post("/api/addProduct.php", productDetails)
+        await axios.post("https://scandiwebnoah.000webhostapp.com/addProducts.php", productDetails)
         .then(res => console.log(res.data));
         navigate('/');
     }
