@@ -54,8 +54,8 @@ export default function ProductList(){
                     <div className="product-header">
                         <h2>Product List</h2>
                         <div className="links">
-                            <Link to="/AddProduct" className="add-btn" >Add</Link>
-                            <button className="del-button">Mass Delete</button>
+                            <Link to="/AddProduct" className="add-btn" >ADD</Link>
+                            <Link className="del-button">MASS DELETE</Link>
                         </div>
                     </div>
                     <hr/>
