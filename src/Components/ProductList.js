@@ -10,7 +10,7 @@ export default function ProductList(){
 
 
     const loadProducts =  async () => {
-        const result = axios.get("https://scandiwebnoah.000webhostapp.com/viewProducts.php")
+        const result = await axios.get("https://scandiwebnoah.000webhostapp.com/viewProducts.php")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
         // console.log(result.data.phpresult[0])
