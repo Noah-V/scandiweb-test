@@ -10,7 +10,7 @@ export default function ProductList(){
 
 
     const loadProducts = async () => {
-        const result = await axios.get("/api")
+        const result = await axios.get("/api/viewProducts.php?i=1")
         setProducts(result.data.phpresult);
         console.log(result.data.phpresult);
         // console.log(result.data.phpresult[0])
