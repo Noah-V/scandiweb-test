@@ -67,7 +67,7 @@ export default function AddProduct(){
         event.preventDefault();
         setFormErrors(validate(productDetails));
         setIsSubmit(true)
-        await axios.post("https://localhost/PHP%20connect%20with%20React/addProducts.php", productDetails)
+        await axios.post("http://juniortestnoahvikoo.infinityfreeapp.com/addProduct.php", productDetails)
         .then(res => console.log(res.data));
         navigate('/');
     }
