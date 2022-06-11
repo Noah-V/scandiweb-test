@@ -26,11 +26,14 @@ export default function ProductList(){
         console.log("fjdnlfjd")
             products.forEach(product => {
                 if(product.select){
-                    axios.delete(`https://scandiwebnoah.000webhostapp.com/deleteProducts.php?id=${product.ID}`)
-                    .then(res => {
-                        console.log(res.data);
-                        loadProducts();
-                    })      
+                    // axios.delete(`https://scandiwebnoah.000webhostapp.com/deleteProducts.php?id=${product.ID}`)
+                    fetch(`https://scandiwebnoah.000webhostapp.com/deleteProducts.php?id=${product.ID}`)
+                    // .then(res => {
+                    //     console.log(res.data);
+                    //     loadProducts();
+                    // })   
+                    .then(res => res.json())
+                    .then(loadProducts())   
                 }
             })
     }

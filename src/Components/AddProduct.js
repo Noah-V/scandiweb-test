@@ -67,12 +67,15 @@ export default function AddProduct(){
         event.preventDefault();
         setFormErrors(validate(productDetails));
         setIsSubmit(true)
-        await axios.post("https://scandiwebnoah.000webhostapp.com/addProducts.php", productDetails)
-        .then(res => {
-                console.log(res.data);
-                navigate('/')
-            }
-        );
+        // await axios.post("https://scandiwebnoah.000webhostapp.com/addProducts.php", productDetails)
+        fetch("https://scandiwebnoah.000webhostapp.com/addProducts.php", productDetails)
+        // .then(res => {
+        //         console.log(res.data);
+        //         navigate('/')
+        //     }
+        // );
+        .then(response => response.json())
+        .then(navigate('/'))
     }
     
     function validate(productDetails){
