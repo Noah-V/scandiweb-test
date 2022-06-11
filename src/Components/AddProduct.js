@@ -74,7 +74,7 @@ export default function AddProduct(){
         //         navigate('/')
         //     }
         // );
-        .then(response => response.json())
+        // .then(response => response.json())
         .then(navigate('/'))
     }
     
